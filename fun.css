@@ -1,0 +1,58 @@
+body {
+    margin: 25px;
+    padding: 25px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%, -50%);
+}
+.box {
+    border-top: 50px solid #000;
+    border-bottom: 50px solid tomato;
+    width: 100px;
+    border-radius: 50%;
+    animation: jump 1s infinite linear;
+    opacity: .8;
+    
+    }
+
+.shadow {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    height: 20px;
+    background: #262626;
+    border-radius: 50%;
+    animation: shadow 1s infinite linear;
+    opacity: .4;
+
+    }
+
+@keyframes jump {
+    0% {
+    transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+    transform: translateY(-200px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(360deg);
+    }
+}
+
+@keyframes shadow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
